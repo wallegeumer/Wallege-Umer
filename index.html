@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="SCdICWFSh-Wc7PeDFc-rrMqE9tAQAa88MhJLsbGtUok" />
+
   <!-- Browser Theme Color -->
   <meta name="theme-color" content="#05070d" />
   <meta name="msapplication-TileColor" content="#05070d" />
@@ -848,25 +851,34 @@
             </div>
           </div>
 
-          <form class="contact-form" id="contactForm">
+          <form
+            class="contact-form"
+            id="contactForm"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input type="hidden" name="access_key" value="f4eeacb5-919e-4b78-8837-33b1091dc184" />
+            <input type="hidden" name="subject" value="New Project Request From Umer Portfolio" />
+            <input type="hidden" name="from_name" value="Umer Portfolio Website" />
+
             <div class="form-glow"></div>
 
             <div class="form-row">
               <div class="form-group">
                 <label for="name">Your Name</label>
-                <input type="text" id="name" placeholder="Enter your name" required />
+                <input type="text" id="name" name="name" placeholder="Enter your name" required />
               </div>
 
               <div class="form-group">
                 <label for="email">Your Email</label>
-                <input type="email" id="email" placeholder="Enter your email" required />
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
               </div>
             </div>
 
             <div class="form-group">
               <label for="projectType">Project Type</label>
 
-              <select id="projectType" required>
+              <select id="projectType" name="project_type" required>
                 <option value="">Select project type</option>
                 <option value="Business Website">Business Website</option>
                 <option value="Elementor Website">Elementor Website</option>
@@ -879,7 +891,7 @@
             <div class="form-group">
               <label for="budget">Estimated Budget</label>
 
-              <select id="budget" required>
+              <select id="budget" name="budget" required>
                 <option value="">Select budget range</option>
                 <option value="Small Project">Small Project</option>
                 <option value="Medium Project">Medium Project</option>
@@ -890,7 +902,7 @@
 
             <div class="form-group">
               <label for="message">Project Details</label>
-              <textarea id="message" placeholder="Tell me what you want to build..." required></textarea>
+              <textarea id="message" name="message" placeholder="Tell me what you want to build..." required></textarea>
             </div>
 
             <button type="submit" class="submit-btn">
